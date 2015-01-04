@@ -1,0 +1,29 @@
+<h1>Listing gamecenters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gamecenters.each do |gamecenter| %>
+      <tr>
+        <td><%= gamecenter.content %></td>
+        <td><%= gamecenter.user_id %></td>
+        <td><%= link_to 'Show', gamecenter %></td>
+        <td><%= link_to 'Edit', edit_gamecenter_path(gamecenter) %></td>
+        <td><%= link_to 'Destroy', gamecenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gamecenter', new_gamecenter_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @gamecenter.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @gamecenter.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_gamecenter_path(@gamecenter) %> |
+<%= link_to 'Back', gamecenters_path %>
